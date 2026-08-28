@@ -23,7 +23,7 @@ public class Owner {
     public Owner() {
     }
 
-    public Owner(String documentType, String documentNumber, String fullName, String phone, String email, String address, boolean isActive, Localdate registrationDate) {
+    public Owner(String documentType, String documentNumber, String fullName, String phone, String email, String address, boolean isActive, LocalDate registrationDate) {
         this.documentType = documentType;
         this.documentNumber = documentNumber;
         this.fullName = fullName;
@@ -34,7 +34,7 @@ public class Owner {
         this.registrationDate = registrationDate;
     }
 
-    public Owner(Integer id, String documentType, String documentNumber, String fullName, String phone, String email, String address, boolean isActive, Localdate registrationDate) {
+    public Owner(Integer id, String documentType, String documentNumber, String fullName, String phone, String email, String address, boolean isActive, LocalDate registrationDate) {
         this.id = id;
         this.documentType = documentType;
         this.documentNumber = documentNumber;

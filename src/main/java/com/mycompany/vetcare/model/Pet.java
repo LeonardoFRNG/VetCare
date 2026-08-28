@@ -138,8 +138,4 @@ public class Pet{
     public String toString() {
         return name + " (" + species + " - " + breed + ")";
     } 
-
-    
-    
-    
 }
