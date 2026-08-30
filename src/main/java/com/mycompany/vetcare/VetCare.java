@@ -4,9 +4,10 @@
 
 package com.mycompany.vetcare;
 
-import com.mycompany.vetcare.config.DatabaseConnection;
-import java.sql.Connection;
-import java.sql.SQLException;
+import com.mycompany.vetcare.model.Owner;
+import com.mycompany.vetcare.repository.OwnerRepository;
+import com.mycompany.vetcare.repository.OwnerRepositoryImpl;
+import java.time.LocalDate;
 
 /**
  *
@@ -15,10 +16,28 @@ import java.sql.SQLException;
 public class VetCare {
 
  public static void main(String[] args) {
-        try (Connection conn = DatabaseConnection.getConnection()) {
-            System.out.println("¡Conexión exitosa a MySQL, Leonardo!");
-        } catch (SQLException e) {
-            System.out.println("Error al conectar: " + e.getMessage());
+     
+     try {
+        //1. instanciamos la implementacion, pero la guardamos en una variable de tipo interfaz (Polimorfismo)
+        OwnerRepository ownerRepo = new OwnerRepositoryImpl();
+        
+        // 2. Creamos un objeto Owner en Java
+        Owner nuevoPropietario = new Owner(
+                "CC",
+                "103353342",
+                "Isabella Jimenez",
+                "3001234332",
+                "Isabella@gmail.com",
+                "Calle 12, 23 - 43",
+                true,
+                LocalDate.now()
+        );
+        ownerRepo.save(nuevoPropietario);
+         System.out.println("Proceso de guardado, exitosamente.");
+        } catch (Exception e) {
+            System.out.println("Ocurrió un error inesperado: " + e.getMessage());
         }
     }
+    
+    
 }

@@ -102,7 +102,7 @@ public class Owner {
         this.address = address;
     }
 
-    public boolean isIsActive() {
+    public boolean isActive() {
         return isActive;
     }
 
