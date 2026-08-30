@@ -19,7 +19,7 @@ public class DatabaseConnection {
     private static final String URL = "jdbc:mysql://localhost:3306/vetcare";
     
     private static final String USER = "root";
-    private static final String PASSWORD = "Qwe.123*";
+    private static final String PASSWORD = "Leonardo123!";
     
     //constructor privado para evitar que alguien haga: new DatabaseConnection()
     //no necesitamos instanciar esta clase si no usar su metodo estatico.
